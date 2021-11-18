@@ -12,6 +12,9 @@ sed 's/\.//g;s/\(.*\)/\L\1/;s/\ /\n/g' *.srt | sort  | uniq -c | sort -n > wordf
 remove timestamps from list:
 sed -i '/pattern to match/d' ./wordfreq_all.txt
 
+cat word_test.txt | grep  '[aábcdeéfghiíjklmnoóöőpqrstuúüűvwxyz]\+'
+
+
 reformat timestamps in files in folder so it sorts better:
 #! /bin/bash
 for f in *.srt ; do
